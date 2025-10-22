@@ -28,7 +28,7 @@ const onSubmit = async () => {
   })
 
   const body = await response.json()
-
+  console.log(body)
   if (body.code === "SUCCESS") {
     const accessToken = body.payload.data.access_token
     localStorage.setItem('access_token', accessToken)
@@ -44,7 +44,9 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  Login User With Library iqbalatma
+  <div class="bg-green-400">
+    Login User With Library iqbalatma
+  </div>
 
   <div class="grid grid-cols-12 mt-10 gap-5">
     <div class="col-span-12">
